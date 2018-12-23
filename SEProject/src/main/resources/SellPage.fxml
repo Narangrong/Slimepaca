@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SellPageController">
+   <content>
+      <AnchorPane prefHeight="800.0" prefWidth="560.0" style="-fx-background-color: #D9E4F7;">
+         <children>
+            <TextField fx:id="name" layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="510.0" promptText="Product Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="email" layoutX="14.0" layoutY="557.0" prefHeight="30.0" prefWidth="510.0" promptText="Your Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="price" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="475.0" promptText="0.00 ฿">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <SplitMenuButton fx:id="typeBox" layoutX="19.0" layoutY="202.0" mnemonicParsing="false" text="Please selected">
+               <items>
+                  <MenuItem fx:id="starter" mnemonicParsing="false" onAction="#starterHandler" text="Starter" />
+                  <MenuItem fx:id="middle" mnemonicParsing="false" onAction="#middleHandler" text="Middle Game" />
+                  <MenuItem fx:id="late" mnemonicParsing="false" onAction="#lateHandler" text="Late Game" />
+               </items>
+            </SplitMenuButton>
+            <Label fx:id="nameL" layoutX="14.0" layoutY="93.0" text="Product Name*" />
+            <TextArea fx:id="detail" layoutX="14.0" layoutY="275.0" prefHeight="150.0" prefWidth="510.0" promptText="Please write the information here">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="typeL" layoutX="17.0" layoutY="174.0" text="Product Type*" />
+            <Label fx:id="detailL" layoutX="16.0" layoutY="248.0" text="Information*" />
+            <Label fx:id="priceL" layoutX="21.0" layoutY="452.0" text="Price*" />
+            <Label fx:id="emailL" layoutX="17.0" layoutY="529.0" text="E-mail*" />
+            <Button fx:id="sendButton" layoutX="15.0" layoutY="683.0" mnemonicParsing="false" onAction="#sendButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #3D8BCD;" text="Send" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="canelButton" layoutX="180.0" layoutY="683.0" mnemonicParsing="false" onAction="#cancelButtonHandler" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FFFF;" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearButton" layoutX="433.0" layoutY="683.0" mnemonicParsing="false" onAction="#clearButtonHandler" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #F78783;" text="Clear" textFill="#f8f5f5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
